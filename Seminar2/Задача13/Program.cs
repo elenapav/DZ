@@ -21,5 +21,10 @@ else
     }
 
     int b = num % 10;
+    
+    if (b < 0)
+    {
+        b = -b;
+    }
     Console.WriteLine($"Третья цифра {b}");
 }
