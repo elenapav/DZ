@@ -10,6 +10,7 @@ int num = int.Parse(Console.ReadLine()!);
 if ((num > 99 && num < 1000) || (num < -99 && num > -1000))
 {
     int a = (num / 10) % 10;
+    
     if (a < 0)
     {
         a = -a;
