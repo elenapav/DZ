@@ -11,7 +11,6 @@ void Palindrom(int num)
 
         Console.WriteLine("Число - палиндром");
 
-
     else
         Console.WriteLine("Число не палиндром");
 }
