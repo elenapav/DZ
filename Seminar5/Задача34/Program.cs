@@ -14,7 +14,7 @@ int[] GetArray(int size, int minValue, int maxValue)
 }
 
 
-int[] array = GetArray(10, 100, 1000);
+int[] array = GetArray(10, 100, 999);
 Console.WriteLine($"Массив [{String.Join(", ", array)}]");
 
 int count = 0;
