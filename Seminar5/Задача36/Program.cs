@@ -19,10 +19,9 @@ int[] array = GetArray(4, 1, 99);
 Console.WriteLine($"Массив [{String.Join(", ", array)}]");
 
 int sum = 0;
-for (int i = 0; i < array.Length; i++)
+for (int i = 1; i < array.Length; i = i + 2)
 {
-    if (i % 2 == 1)
-        sum = sum + array[i];
+    sum = sum + array[i];
 }
 Console.WriteLine($"Сумма элементов стоящих на нечётных позициях = {sum}");
 
