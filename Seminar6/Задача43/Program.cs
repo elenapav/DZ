@@ -6,19 +6,21 @@
 
 string Cross(double b1, double k1, double b2, double k2)
 {
+    string result = "";
     double x = (b1 - b2) / (k2 - k1);
     double y = k2 * x + b2;
-    return $"({x:f1}; {y:f1})";
+    result = $"({x:f1}; {y:f1})";
+    return result;
 }
 
 Console.WriteLine("Введите значение b1");
-double b1 = int.Parse(Console.ReadLine()!);
+double b1 = double.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите значение k1");
-double k1 = int.Parse(Console.ReadLine()!);
+double k1 = double.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите значение b2");
-double b2 = int.Parse(Console.ReadLine()!);
+double b2 = double.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите значение k2");
-double k2 = int.Parse(Console.ReadLine()!);
+double k2 = double.Parse(Console.ReadLine()!);
 
 if (k1 == k2 && b1 == b2)
     Console.WriteLine("Прямые совпадают");
@@ -26,3 +28,4 @@ else if (k1 == k2)
     Console.WriteLine("Нет точки пересечения, прямые параллельны");
 else
     Console.WriteLine($"Точка пересечения {Cross(b1, k1, b2, k2)}");
+
