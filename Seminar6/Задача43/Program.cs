@@ -4,13 +4,11 @@
 // значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 ->(-0,5; -0,5)
 
-string Cross(double b1, double k1, double b2, double k2)
+void Cross(double b1, double k1, double b2, double k2)
 {
-    string result = "";
     double x = (b1 - b2) / (k2 - k1);
     double y = k2 * x + b2;
-    result = $"({x:f1}; {y:f1})";
-    return result;
+    Console.WriteLine($"Точка пересечения прямых ({x:f2}; {y:f2})");
 }
 
 Console.WriteLine("Введите значение b1");
@@ -27,5 +25,5 @@ if (k1 == k2 && b1 == b2)
 else if (k1 == k2)
     Console.WriteLine("Нет точки пересечения, прямые параллельны");
 else
-    Console.WriteLine($"Точка пересечения {Cross(b1, k1, b2, k2)}");
+    Cross(b1, k1, b2, k2);
 
